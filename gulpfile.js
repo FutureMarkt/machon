@@ -39,14 +39,14 @@ function images() {
 function scripts() {
   return (
     src([
-      "node_modules/gsap/dist/gsap.min.js",
-      "node_modules/split-type/dist/index.js",
+      // "node_modules/gsap/dist/gsap.min.js",
+      // "node_modules/split-type/dist/index.js",
 
-      "app/js/gsap.js",
-      // 'app/js/main.js'
+      // "app/js/gsap.js",
+      'app/js/main.js'
     ])
-      // .pipe(concat('main.min.js'))
-      .pipe(concat("gsap.min.js"))
+      .pipe(concat('main.min.js'))
+      // .pipe(concat("gsap.min.js"))
       .pipe(uglify())
       .pipe(dest("app/js"))
       .pipe(browserSync.stream())
@@ -74,6 +74,7 @@ function build() {
       "app/fonts/**/*",
       "app/js/main.min.js",
       "app/js/gsap.min.js",
+      "app/js/wow.min.js",
       "app/*.html",
     ],
     { base: "app" }

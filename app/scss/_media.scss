@@ -44,6 +44,7 @@
     overflow: hidden;
   }
   .menu__list-wrapper {
+    display: block;
     position: absolute;
     right: 0;
     left: 0;
@@ -54,8 +55,8 @@
     &.active {
       // position: absolute;
       background-color: rgba($color: $black, $alpha: 0.5);
-      right: 354px;
-      z-index: 3;
+      right: 360px;
+      z-index: 6;
       .menu__list--mob {
         display: flex;
       }
@@ -75,10 +76,10 @@
     background-color: $white;
     flex-direction: column;
     gap: 30px;
-    width: 354px;
-
+    width: 360px;
+    z-index: 6;
     position: absolute;
-    right: -354px;
+    right: -360px;
     top: 108px;
     height: 100%;
     height: calc(100% - 108px);
@@ -198,10 +199,10 @@
     letter-spacing: -0.2px;
     max-width: 432px;
   }
-  .invovled__title {
+  .involved__title {
     margin-left: 0;
   }
-  .invovled__buttons {
+  .involved__buttons {
     justify-content: start;
   }
   .logotype__inner {
@@ -332,6 +333,91 @@
   .daily__items {
     margin-bottom: 100px;
   }
+
+  // animations
+
+  .wow {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+
+  .logotype__svg,
+  .logotype__svg-wrapper,
+  .menu__info .line,
+  .menu__button::after,
+  .menu__info-line{
+    animation: none!important;
+  }
+  .menu__info .line:nth-child(2){
+    z-index: 1;
+    color: $black;
+  }
+  .menu__button::after,
+  .logotype__svg-wrapper::after,
+  .leadership__item-mask,
+  .avrechim__item-mask,
+  .about-page__mask,
+  .team__item-mask{
+    display: none;
+  }
+  .btn{
+    p:last-child{
+      display: none;
+    }
+  }
+  .about__goals-item:first-child .about__goals-text .about__goals-line{
+    width: 100%;
+  }
+  .ways__item-line .ways__item-circle,
+  .about-page__text--second{
+    opacity: 1;
+  }
+  .ways__info-mail{
+    p:last-child{display: none;}
+  }
+
+  .team__item-title p:last-child{
+    margin-left: 0;
+  }
+  .team__item-title{
+    overflow: visible;
+  }
+  .team__item--second{
+    .team__item-titleinfo .menu__info-line{
+      width: 256px;
+    }
+  }
+  .team__item-title{
+    justify-content: center;
+    align-items: center;
+  }
+  .team__item-titleinfo{
+    margin-right: 0;
+    padding-right: 0;
+    .menu__info-line{
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .ways__items{
+    margin-left: 0;
+  }
 }
 
 /* Medium Devices, Desktops */
@@ -342,7 +428,7 @@
     justify-content: end;
   }
   .daily {
-    .invovled__titlebox {
+    .involved__titlebox {
       margin-left: 0;
     }
   }
@@ -428,6 +514,17 @@
     margin-left: 0;
     text-align: center;
   }
+  .ways__item-box{
+    gap: 20px;
+    flex-direction: column;
+  }
+  .ways__list{
+    margin-left: 173px;
+  }
+  .ways__item--second .ways__list{
+    margin-left: 147px;
+  }
+  
 }
 /**/
 
@@ -520,10 +617,10 @@
   .about-page__item-title {
     font-size: 32px;
   }
-  .invovled__title {
+  .involved__title {
     font-size: 132px;
   }
-  .about-page__inner .invovled__titlebox {
+  .about-page__inner .involved__titlebox {
     margin-bottom: 40px;
   }
   .avrechim-page__title {
@@ -545,7 +642,7 @@
     margin-left: 206px;
   }
   .daily {
-    .invovled__title span {
+    .involved__title span {
       display: block;
     }
   }
@@ -578,10 +675,13 @@
   .avrechim__inner {
     overflow-x: hidden;
   }
-  .avrechim__items {
-    overflow-x: scroll;
-    flex-wrap: nowrap;
-    padding-bottom: 10px;
+  .avrechim-page{
+    .avrechim__items {
+      overflow-x: scroll;
+      flex-wrap: nowrap;
+      padding-bottom: 10px;
+    }
+
   }
   .staff__inner {
     background-image: url(../images/staff-bg--mob.svg) !important;
@@ -627,7 +727,7 @@
     font-size: 26px;
   }
   .ways__list {
-    margin-left: -60px;
+    // margin-left: -60px;
   }
   .ways__item-title::after {
     width: 80px;
@@ -637,7 +737,7 @@
     left: -20px;
   }
   .ways__items {
-    margin-left: 100px;
+    // margin-left: 100px;
   }
   .about__goals-sup {
     display: none;
@@ -738,6 +838,15 @@
     }
     .menu__info {
       color: $white;
+      animation: none;
+    }
+    .menu__info .line{
+      animation: none;
+      background-color: transparent;
+    }
+    .menu__info .line:nth-child(2){
+      color: $white;
+      z-index: 1;
     }
     .menu__info-line,
     .menu__info-line::after {
@@ -805,7 +914,7 @@
   }
   .menu__controls {
     position: relative;
-    z-index: 4;
+    z-index: 7;
   }
   .about__textbox {
     flex-direction: column;
@@ -910,14 +1019,14 @@
   .about-page__list {
     margin-bottom: 80px;
   }
-  .invovled__title {
+  .involved__title {
     font-size: 80px;
   }
-  .invovled__buttons {
+  .involved__buttons {
     flex-direction: column;
     gap: 15px;
   }
-  .invovled__btn {
+  .involved__btn {
     max-width: none;
   }
   .menu__logo--text .menu__info {
@@ -1025,6 +1134,35 @@
     margin-bottom: 25px;
     max-width: 330px;
   }
+  .menu__info-wrapper .menu__info--copmressed{
+    display: none;
+  }
+  .team__item-title{
+    align-items: start;
+  }
+  .team__item-titleinfo .menu__info-line{
+    left: 0;
+    transform: translateX(0);
+  }
+  .team__item--second .team__item-image {
+    max-width: 240px;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.ways__item-line{
+  width: 60px;  
+}
+.ways__item-title{
+  padding-left: 75px;
+}
+.ways__list,
+.ways__item--second .ways__list{
+  margin-left: 0;
+}
 }
 
 @media only screen and (max-width: 540px) {
@@ -1050,6 +1188,12 @@
   .team__item--second .team__item-titleinfo:after {
     left: 131px;
   }
+  .team__item--second .team__item-titleinfo{
+    max-width: 132px;
+  }
+  .team__item--second .team__item-titleinfo .menu__info-line {
+    width: 124px;
+}
 }
 
 /* Extra Small Devices, Phones */
@@ -1060,6 +1204,7 @@
   .avrechim-page .avrechim-page__title {
     font-size: 60px;
   }
+
   .staff__title,
   .avrechim__title,
   .leadership__title,
@@ -1072,8 +1217,8 @@
   }
   .about__titlebox,
   .leadership__titlebox,
-  .avrechim__title,
-  .staff__title {
+  .avrechim__titlebox,
+  .staff__titlebox {
     margin-bottom: 25px;
   }
   .avrechim__title-sup,
@@ -1120,7 +1265,7 @@
     left: -35px;
   }
   .ways__items {
-    margin-left: 85px;
+    // margin-left: 85px;
   }
   .ways__info-text {
     font-size: 14px;
@@ -1147,7 +1292,9 @@
   .about__goals-text {
     max-width: 260px;
   }
-
+  .logotype__svg-wrapper{
+    width: auto;
+  }
   .logotype__button {
     display: block;
     margin-top: 135px;
@@ -1207,14 +1354,14 @@
   .popup__text {
     max-width: 280px;
   }
-  .invovled__title {
+  .involved__title {
     font-size: 60px;
   }
-  .invovled__arrow-img {
+  .involved__arrow-img {
     width: 25px;
     height: 25px;
   }
-  .about-page__inner .invovled__title span {
+  .about-page__inner .involved__title span {
     display: block;
   }
   .about-page__item-title {
@@ -1282,12 +1429,27 @@
   .daily__item {
     min-height: 130px;
   }
+
+  .avrechim__inner{
+    overflow: auto;
+  }
+
+    .avrechim__items{
+    flex-wrap: nowrap;
+    overflow: scroll;
+    width: 1580px;
+    padding-bottom: 10px;
+  }
 }
+
 /**/
 
 @media only screen and (max-width: 426px) {
   .daily__item:first-child {
     min-height: 145px;
+  }
+  .daily__item-p{
+    margin-top: 50px;
   }
 }
 

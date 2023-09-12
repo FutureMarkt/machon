@@ -1,10 +1,22 @@
-// new WOW().init();
+new WOW({
+  mobile: false,
+}).init();
+
+
 
 const myText = new SplitType(".menu__button");
 const myText2 = new SplitType(".menu__list-link");
 const myText3 = new SplitType(".footer__list-link");
 const myText4 = new SplitType(".footer__contacts-phone");
 const myText5 = new SplitType(".footer__contacts-mail");
+
+let matchMedia = gsap.matchMedia() 
+
+
+// document.querySelector('.menu__info .line').classList.add('wow')
+// document.querySelector('.menu__info .line').classList.add('animate__slideInDown')
+// document.querySelector('.menu__info .line').classList.add('animate__animated')
+
 // // // // // //
 // // // // // //
 // // // // // //
@@ -14,41 +26,47 @@ const menuListThird = document.querySelector(".menu__list-link--3");
 const menuListFour = document.querySelector(".menu__list-link--4");
 const menuListFive = document.querySelector(".menu__list-link--5");
 
-const animationMenu1 = gsap.to(".menu__list-link--1 .char", {
-  y: -31,
-  stagger: 0.02,
-  delay: 0.1,
-  duration: 0.1,
-  paused: true,
-});
-const animationMenu2 = gsap.to(".menu__list-link--2 .char", {
-  y: -31,
-  stagger: 0.02,
-  delay: 0.1,
-  duration: 0.1,
-  paused: true,
-});
-const animationMenu3 = gsap.to(".menu__list-link--3 .char", {
-  y: -31,
-  stagger: 0.02,
-  delay: 0.1,
-  duration: 0.1,
-  paused: true,
-});
-const animationMenu4 = gsap.to(".menu__list-link--4 .char", {
-  y: -31,
-  stagger: 0.02,
-  delay: 0.1,
-  duration: 0.1,
-  paused: true,
-});
-const animationMenu5 = gsap.to(".menu__list-link--5 .char", {
-  y: -31,
-  stagger: 0.02,
-  delay: 0.1,
-  duration: 0.1,
-  paused: true,
-});
+// matchMedia.add('max-width: 1025px', () => {
+  const animationMenu1 = gsap.to(".menu__list-link--1 .char", {
+    y: -31,
+    stagger: 0.02,
+    delay: 0.1,
+    duration: 0.1,
+    paused: true,
+  });
+  const animationMenu2 = gsap.to(".menu__list-link--2 .char", {
+    y: -31,
+    stagger: 0.02,
+    delay: 0.1,
+    duration: 0.1,
+    paused: true,
+  });
+  const animationMenu3 = gsap.to(".menu__list-link--3 .char", {
+    y: -31,
+    stagger: 0.02,
+    delay: 0.1,
+    duration: 0.1,
+    paused: true,
+  });
+  const animationMenu4 = gsap.to(".menu__list-link--4 .char", {
+    y: -31,
+    stagger: 0.02,
+    delay: 0.1,
+    duration: 0.1,
+    paused: true,
+  });
+  const animationMenu5 = gsap.to(".menu__list-link--5 .char", {
+    y: -31,
+    stagger: 0.02,
+    delay: 0.1,
+    duration: 0.1,
+    paused: true,
+  });
+
+// })
+
+
+
 menuListFirst.addEventListener("mouseenter", () => animationMenu1.play());
 menuListFirst.addEventListener("mouseleave", () => animationMenu1.reverse());
 menuListSec.addEventListener("mouseenter", () => animationMenu2.play());
@@ -68,41 +86,44 @@ const footerMenuListThird = document.querySelector(".footer__list-link--3");
 const footerMenuListFour = document.querySelector(".footer__list-link--4");
 const footerMenuListFive = document.querySelector(".footer__list-link--5");
 
-const animationFooterMenu1 = gsap.to(".footer__list-link--1 .char", {
-  y: -31,
-  stagger: 0.02,
-  delay: 0.1,
-  duration: 0.1,
-  paused: true,
-});
-const animationFooterMenu2 = gsap.to(".footer__list-link--2 .char", {
-  y: -31,
-  stagger: 0.02,
-  delay: 0.1,
-  duration: 0.1,
-  paused: true,
-});
-const animationFooterMenu3 = gsap.to(".footer__list-link--3 .char", {
-  y: -31,
-  stagger: 0.02,
-  delay: 0.1,
-  duration: 0.1,
-  paused: true,
-});
-const animationFooterMenu4 = gsap.to(".footer__list-link--4 .char", {
-  y: -31,
-  stagger: 0.02,
-  delay: 0.1,
-  duration: 0.1,
-  paused: true,
-});
-const animationFooterMenu5 = gsap.to(".footer__list-link--5 .char", {
-  y: -31,
-  stagger: 0.02,
-  delay: 0.1,
-  duration: 0.1,
-  paused: true,
-});
+// matchMedia.add('max-width: 1025px', () => {
+  const animationFooterMenu1 = gsap.to(".footer__list-link--1 .char", {
+    y: -31,
+    stagger: 0.02,
+    delay: 0.1,
+    duration: 0.1,
+    paused: true,
+  });
+  const animationFooterMenu2 = gsap.to(".footer__list-link--2 .char", {
+    y: -31,
+    stagger: 0.02,
+    delay: 0.1,
+    duration: 0.1,
+    paused: true,
+  });
+  const animationFooterMenu3 = gsap.to(".footer__list-link--3 .char", {
+    y: -31,
+    stagger: 0.02,
+    delay: 0.1,
+    duration: 0.1,
+    paused: true,
+  });
+  const animationFooterMenu4 = gsap.to(".footer__list-link--4 .char", {
+    y: -31,
+    stagger: 0.02,
+    delay: 0.1,
+    duration: 0.1,
+    paused: true,
+  });
+  const animationFooterMenu5 = gsap.to(".footer__list-link--5 .char", {
+    y: -31,
+    stagger: 0.02,
+    delay: 0.1,
+    duration: 0.1,
+    paused: true,
+  });
+// })
+
 footerMenuListFirst.addEventListener("mouseenter", () =>
   animationFooterMenu1.play()
 );
@@ -137,37 +158,71 @@ footerMenuListFive.addEventListener("mouseleave", () =>
 // // // // // //
 // // // // // //
 const headerBtn = document.querySelector(".menu__button--header");
-const headerMobBtn = document.querySelector(".menu__button--mob");
+// const headerMobBtn = document.querySelector(".menu__button--mob");
 const footerBtn = document.querySelector(".menu__button--footer");
 
-const animationHeader = gsap.to(".menu__button--header .char", {
-  y: -40,
-  stagger: 0.02,
-  delay: 0.1,
-  duration: 0.1,
-  paused: true,
-});
-const animationHeaderMob = gsap.to(".menu__button--mob .char", {
-  y: -40,
-  stagger: 0.02,
-  delay: 0.1,
-  duration: 0.1,
-  paused: true,
-});
-const animationFooter = gsap.to(".menu__button--footer .char", {
-  y: -40,
-  stagger: 0.02,
-  delay: 0.1,
-  duration: 0.1,
-  paused: true,
-});
+// matchMedia.add('max-width: 1025px', () => {
+  const animationHeader = gsap.to(".menu__button--header .char", {
+    y: -40,
+    stagger: 0.02,
+    delay: 0.1,
+    duration: 0.1,
+    paused: true,
+  });
+  // const animationHeaderMob = gsap.to(".menu__button--mob .char", {
+  //   y: -40,
+  //   stagger: 0.02,
+  //   delay: 0.1,
+  //   duration: 0.1,
+  //   paused: true,
+  // });
+  const animationFooter = gsap.to(".menu__button--footer .char", {
+    y: -40,
+    stagger: 0.02,
+    delay: 0.1,
+    duration: 0.1,
+    paused: true,
+  });
+// })
+
+
 
 headerBtn.addEventListener("mouseenter", () => animationHeader.play());
 headerBtn.addEventListener("mouseleave", () => animationHeader.reverse());
-headerMobBtn.addEventListener("mouseenter", () => animationHeaderMob.play());
-headerMobBtn.addEventListener("mouseleave", () => animationHeaderMob.reverse());
+// headerMobBtn.addEventListener("mouseenter", () => animationHeaderMob.play());
+// headerMobBtn.addEventListener("mouseleave", () => animationHeaderMob.reverse());
 footerBtn.addEventListener("mouseenter", () => animationFooter.play());
 footerBtn.addEventListener("mouseleave", () => animationFooter.reverse());
+
+// // // // // //
+// // // // // //
+// // // // // //
+
+const donatePopup = new SplitType(".donate-popup__btn--purple");
+const donatePopupBlack = new SplitType(".donate-popup__btn--black");
+
+const donateBtn = document.querySelector(".donate-popup__btn--purple");
+const donateBtnBlack = document.querySelector(".donate-popup__btn--black");
+
+const animationDonateBtn = gsap.to(".donate-popup__btn--purple .char", {
+  y: -40,
+  stagger: 0.02,
+  delay: 0.1,
+  duration: 0.1,
+  paused: true,
+});
+const animationDonateBtnBlack = gsap.to(".donate-popup__btn--black .char", {
+  y: -40,
+  stagger: 0.02,
+  delay: 0.1,
+  duration: 0.1,
+  paused: true,
+});
+
+donateBtn.addEventListener("mouseenter", () => animationDonateBtn.play());
+donateBtn.addEventListener("mouseleave", () => animationDonateBtn.reverse());
+donateBtnBlack.addEventListener("mouseenter", () => animationDonateBtnBlack.play());
+donateBtnBlack.addEventListener("mouseleave", () => animationDonateBtnBlack.reverse());
 
 // // // // // //
 // // // // // //
@@ -299,13 +354,6 @@ function calcScroll() {
   return scrollWidth;
 }
 
-bindModal(".avrechim__item--1", ".popup--1", ".popup--1 .popup__close");
-bindModal(".avrechim__item--2", ".popup--2", ".popup--2 .popup__close");
-bindModal(".avrechim__item--3", ".popup--3", ".popup--3 .popup__close");
-bindModal(".avrechim__item--4", ".popup--4", ".popup--4 .popup__close");
-bindModal(".avrechim__item--5", ".popup--5", ".popup--5 .popup__close");
-bindModal(".avrechim__item--6", ".popup--6", ".popup--6 .popup__close");
-
 bindModal(
   ".menu__button",
   ".donate-popup",
@@ -314,4 +362,3 @@ bindModal(
   "flex"
 );
 
-// showModalByTime(".popup", 60000);
