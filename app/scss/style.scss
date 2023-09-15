@@ -33,15 +33,15 @@
   // transition: .3s ease;
   padding: 2px 0;
   &:first-child{
-    animation: firstLineAnim 1.5s forwards;
+    animation: firstLineAnim .750s forwards;
     animation-timing-function: ease;
   }
   &:nth-child(2){
     color: $white;
     position: relative;
     z-index: -1;
-    animation: lastLineAnim 1s forwards ;
-    animation-delay: 1s;
+    animation: lastLineAnim .5s forwards ;
+    animation-delay: .5s;
     animation-timing-function: ease;
   }
 }
@@ -103,7 +103,7 @@
     background: $purple;
     bottom: -12px;
     left: 0;
-    animation: lineAnim 2s forwards ;
+    animation: lineAnim 1s forwards ;
     &::after {
       position: absolute;
       content: "";
@@ -184,7 +184,7 @@
       width: 100%;
       height: 100%;
       z-index: 1;  
-      animation: logoWrapperAnim 4s forwards 2s  ;
+      animation: logoWrapperAnim 2s forwards 1s  ;
     }
   }
   &__controls {
@@ -291,7 +291,7 @@
   }
   &__contacts-phone {
     font-variant-numeric: lining-nums proportional-nums;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 125%; /* 21.25px */
@@ -382,7 +382,7 @@
       width: 111%;
       height: 105%;
       z-index: 1;  
-    animation: logoWrapperAnim 4s forwards   ;
+    animation: logoWrapperAnim 3s forwards   ;
     }
   }
   
@@ -400,13 +400,13 @@
         animation-delay: .2s;
       }
       &:nth-child(3){
-        animation-delay: .4s;
+        animation-delay: .3s;
       }
       &:nth-child(4){
-        animation-delay: .6s;
+        animation-delay: .4s;
       }
       &:nth-child(5){
-        animation-delay: .8s;
+        animation-delay: .5s;
       }
     }
   }
@@ -414,7 +414,7 @@
   &__svg {
     margin-left: -110px;
     max-width: 780px;
-    animation: logoAnim 2s forwards   ;
+    animation: logoAnim 1.5s forwards   ;
   }
   &__button {
     display: none;
@@ -1072,6 +1072,13 @@ transform: scale(0);
     justify-content: space-between;
   }
   &__item {
+    text-align: center;
+    img{
+      width: 220px;
+      border-radius: 50%;
+      height: 220px;
+      object-fit: cover;
+    }
   }
   &__item--1 {
     margin-top: 20px;
@@ -1086,8 +1093,12 @@ transform: scale(0);
     font-weight: 800;
     line-height: 100%; /* 22px */
     margin-bottom: 8px;
+    position: relative;
+    z-index: 1;
   }
   &__item-info {
+    position: relative;
+    z-index: 1;
     font-size: 13px;
     font-style: italic;
     font-weight: 400;
@@ -1283,7 +1294,7 @@ transform: scale(0);
   &__info {
     max-width: 760px;
     width: 100%;
-    // margin: 0 auto;
+    margin: 0 auto;
     border: 1px solid $lightgrey;
     text-align: center;
     padding: 38px 120px;
@@ -1446,13 +1457,14 @@ transform: scale(0);
     margin-left: 100px;
   }
   &__title {
-    // margin-left: 90px;
+    margin-left: 90px;
   }
   &__arrow {
   }
   &__buttons {
     display: flex;
-    justify-content: start;
+    // justify-content: start;
+    justify-content: center;
     gap: 40px;
     align-items: center;
     margin-bottom: 50px;
@@ -1670,6 +1682,8 @@ transform: scale(0);
   .staff__titlebox{
     overflow: hidden;
     margin-bottom: 30px;
+    position: relative;
+    z-index: 3;
   }
   .staff__title {
     margin-left: 470px;
@@ -1679,32 +1693,60 @@ transform: scale(0);
   .staff__items {
     justify-content: start;
   }
+  .staff__item {
+    text-align: left;
+  }
   .staff__item-itembox {
     margin-left: 10px;
   }
+  .staff__item-img{
+    border-radius: 0;
+  }
 
   &__inner {
+    overflow: hidden;
+  }
+  &__item{
   }
   &__item-1 {
+    position: relative;
+    overflow: hidden;
   }
   &__item-2 {
     margin-top: 220px;
     display: flex;
     justify-content: end;
     align-items: flex-end;
+    position: relative;
+    overflow: hidden;
     .staff__item-img {
       margin-bottom: 0;
     }
   }
   &__item-3 {
     display: flex;
+    overflow: hidden;
     justify-content: end;
     align-items: flex-end;
     margin-left: -150px;
     max-height: 220px;
+    position: relative;
     .staff__item-img {
       margin-bottom: 0;
     }
+  }
+  &__item-mask{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0px;
+    left: 0;
+    background-color:$white;
+    width: 100%;
+    height: 220px;
+    z-index: 1;
+    transition: .3s ease;
+    animation-fill-mode: forwards !important;
   }
 }
 

@@ -10,7 +10,7 @@ function titleAnimationFunc(selector, wordOrChar = ".word", anim) {
     word.dataset.wowDuration = `1s`;
     i++;
     // i++;
-    word.dataset.wowDelay = `${i * 2}00ms`;
+    word.dataset.wowDelay = `${i * 1}00ms`;
       
     intersectionObserver.disconnect(document.querySelector(selector));
   });
@@ -18,7 +18,6 @@ function titleAnimationFunc(selector, wordOrChar = ".word", anim) {
 
 function lineAnimationFunc(selector, anim, delay = '500ms', duration = '1s') {
   const title = document.querySelector(selector);
-  console.log(title);
   // title.querySelectorAll(wordOrChar).forEach((word, i) => {
     title.classList.add("wow");
     title.classList.add(anim);

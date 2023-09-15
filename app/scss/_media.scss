@@ -20,6 +20,14 @@
   .team__item-titleinfo {
     margin-right: 20px;
   }
+  .involved__title,
+  .involved__titlebox{
+    margin-left: 0;
+  }
+  .involved__buttons{
+    justify-content: start;
+  }
+
 }
 /**/
 @media only screen and (max-width: 1100px) {
@@ -314,8 +322,9 @@
       // min-height: 350px;
     }
     .staff__item-img {
-      max-width: 300px;
-      width: 100%;
+      // max-width: 300px;
+      width: 300px;
+      // width: 100%;
     }
   }
   .dedicated-staff .staff__item-itembox {
@@ -418,6 +427,60 @@
   .ways__items{
     margin-left: 0;
   }
+  .about__text,
+  .about__goals-text,
+  .ways__info-text,
+  .about-page__text,
+  .about-page__item-text,
+  .about-page__item-title,
+  .daily__item-text,
+  .team__item-titleinfo,
+  .team__item-text,
+  .team__item-text--third,
+  .team__item-text--four {
+    .line{
+      color: $black;
+    }
+  }
+  .leadership__item-title,
+  .leadership__item-info,
+  .staff__item-title
+  ,.staff__item-info,
+  .daily__item-time,
+  .team__item-titleinfo{
+    .word{
+      color: $black;
+
+    }
+  }
+  .about__goals-subtitlebox{
+    .char{
+      color: $lightgrey;
+    }
+  }
+  .about__goals-subtitleimg,
+  .team__item-text--second
+  {
+    opacity: 1 !important;
+  }
+
+  .team__item-titleinfo .menu__info-line{
+    left: 0;
+    transform: translateX(0);
+  }
+  .team__item-title{
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+  .team__item-text{
+    max-width: 508px;
+  }
+  .team__item-textbox{
+    gap: 20px;
+  }
+  .dedicated-staff__item-mask{
+    display: none;
+  }
 }
 
 /* Medium Devices, Desktops */
@@ -480,6 +543,10 @@
   }
   .team__item-titleinfo:after {
     left: 56%;
+  }
+  .team__item-titleinfo .menu__info-line{
+    left: 50%;
+    transform: translateX(-50%);
   }
   .team__item-text {
     max-width: 707px;
@@ -691,11 +758,16 @@
     margin: 0 auto;
   }
   .staff__item {
+    text-align: left;
     position: absolute;
     max-width: 155px;
+    img{
+      width: 155px;
+      height: 155px;
+    }
   }
   .staff__item-img {
-    max-width: 155px;
+  
   }
   .staff__items {
     position: relative;
@@ -776,6 +848,7 @@
     }
     .staff__item-img {
       max-width: 216px;
+      height: 216px;
     }
     .staff__title {
       text-align: left;
@@ -1299,6 +1372,8 @@
     display: block;
     margin-top: 135px;
     padding: 20px 60px;
+    max-width: 330px;
+    width: 100%;
     background-color: $purple;
     color: $white;
     text-transform: uppercase;
@@ -1384,6 +1459,7 @@
       line-height: 125%;
     }
     .staff__item-img {
+      height: 155px;
       max-width: 155px;
     }
   }
