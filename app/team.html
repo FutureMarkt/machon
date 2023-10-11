@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Machon Zimrat Ha’aretz </title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -304,7 +305,7 @@
               <div class="team__item">
                 <div class="team__item-top">
                   <div class="team__item-image">
-                    <div class="team__item-mask animate__slideOutDown wow"data-wow-duration="1s"></div>
+                    <div class="team__item-mask animate__slideOutDown wow"data-wow-duration="2s"></div>
                     <img src="images/team1.jpg" alt="" />
                   </div>
                   <div class="team__item-box">
@@ -361,7 +362,7 @@
               </div>
               <div class="team__item team__item--second">
                 <div class="team__item-image">
-                  <div class="team__item-mask animate__slideOutDown wow"data-wow-duration="1s"></div>
+                  <div class="team__item-mask animate__slideOutDown wow"data-wow-duration="2s"></div>
                   <img src="images/team2.jpg" alt="" />
                 </div>
                 <h2 class="team__item-title">
@@ -533,6 +534,80 @@
             </div>
           </div>
         </div>
+        <div class="footer__inner--tablet">
+          <div class="footer__inner-left">
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link footer__list-link--1">
+                  <p>About us</p>
+                  <p>About us</p>
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link footer__list-link--2">
+                  <p>Avrechim</p>
+                  <p>Avrechim</p>
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link footer__list-link--3">
+                  <p>Team</p>
+                  <p>Team</p>
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link footer__list-link--4">
+                  <p>Schedule</p>
+                  <p>Schedule</p>
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link footer__list-link--5">
+                  <p>Contacts</p>
+                  <p>Contacts</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__inner-right">
+            <div class="footer__box-right">
+              <div class="footer__contacts">
+                <h5 class="footer__contacts-title">Contacts</h5>
+                <div class="footer__contacts-box">
+                  <p class="footer__contacts-name">WhatsApp</p>
+                  <a href="tel:+97225383390" class="footer__contacts-phone"
+                    >
+                    <p>+972-2-538-3390</p>
+                    <p>+972-2-538-3390</p>
+                    </a
+                  >
+                </div>
+                <div class="footer__contacts-box">
+                  <p class="footer__contacts-name">Email</p>
+                  <a
+                    href="mailto:moshe@shiratdavid.com"
+                    class="footer__contacts-mail"
+                    >
+                    <p>moshe@shiratdavid.com</p>
+                    <p>moshe@shiratdavid.com</p>
+                    </a
+                  >
+                </div>
+              </div>
+              <div class="footer__logo">
+                <a href="#" class="footer__logo-link">
+                  <img src="images/footerLogo.svg" alt="Footer logotype">
+                </a>
+              </div>
+            </div>
+            <div class="footer__button">
+              <a href="#" class="menu__button menu__button--footer">
+                <p>Donate</p>
+                <p>Donate</p>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
 
@@ -602,15 +677,16 @@
         titleAnimationFunc(".team__item-text--four", ".line", "textAnim");
         titleAnimationFunc('.staff__title-sup', '.char', 'suptitleAnim')
         titleAnimationFunc('.staff__item-title', '.word', 'textAnim')
-      titleAnimationFunc('.staff__item-info', '.word', 'textAnim')
-      titleAnimationFunc('.staff__item-title--second', '.word', 'textAnim')
-      titleAnimationFunc('.staff__item-info--second', '.word', 'textAnim')
-      titleAnimationFunc('.staff__item-title--third', '.word', 'textAnim')
-      titleAnimationFunc('.staff__item-info--third', '.word', 'textAnim')
+        fasterTitleAnimationFunc('.staff__item-info', '.char', 'textAnim')
+        titleAnimationFunc('.staff__item-title--second', '.word', 'textAnim')
+        fasterTitleAnimationFunc('.staff__item-info--second', '.char', 'textAnim')
+        titleAnimationFunc('.staff__item-title--third', '.word', 'textAnim')
+        fasterTitleAnimationFunc('.staff__item-info--third', '.char', 'textAnim')
       });
       intersectionObserver.observe(document.querySelector(".team__item-titleinfo"));
       intersectionObserver.observe(document.querySelector(".team__item-text--third"));
-      intersectionObserver.observe(document.querySelector(".staff__title-sup"));
+      intersectionObserver.observe(document.querySelector(".staff__item-title"));
+      intersectionObserver.observe(document.querySelector(".staff__item-info"));
 // }
 
   </script>

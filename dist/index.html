@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Machon Zimrat Ha’aretz </title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -186,7 +187,8 @@
       <section class="logotype">
         <div class="container">
           <div class="logotype__inner">
-            <p class="logotype__text">We are educational institution  create spiritual leaders</p>
+            <div class="logotype__background"></div>
+            <p class="logotype__text">We are educational institution that creates spiritual leaders</p>
             <div class="logotype__svg-wrapper">
               <svg class="logotype__svg   "  viewBox="0 0 780 570" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M200.243 297.391C208.634 280.615 206.282 259.264 204.057 250.686C229.485 253.545 287.588 261.552 316.576 270.702C345.563 279.853 346.453 317.09 343.275 334.565C336.282 364.431 321.916 424.545 320.39 426.07C318.864 427.595 314.033 429.247 311.808 429.883C312.761 407.007 314.478 356.679 313.715 338.378C312.952 320.077 294.326 312.96 285.109 311.689L200.243 297.391Z" fill="#202020"/>
@@ -221,11 +223,11 @@
             </div>
       
               <p class="logotype__suptitle">בסייד</p>
-              <button class="logotype__button ">learn more</button>
+              <button class="logotype__button " id="scrollButton">learn more</button>
           </div>
         </div>
       </section>
-      <section class="about">
+      <section class="about"  id="targetBlock">
         <div class="container">
           <div class="about__inner">
             <div class="about__titlebox">
@@ -233,10 +235,13 @@
                 <span>A</span>bout us
                 <div class="about__title-sup">עלינו</div>
               </h2>
-              <a href="#" class="about__btn btn wow btnAnim" data-wow-duration="1s">
-                <p>learn more</p>
-                <p>learn more</p>
-              </a>
+              <div class="about__btn-wrapper btn__wrapper">
+                <a href="#" class="about__btn btn wow btnAnim" data-wow-duration="1s">
+                  <p>learn more</p>
+                  <p>learn more</p>
+                </a>
+                <div class="about__btn-mask btn__mask  wow animate__slideOutLeft" data-wow-duration=".5s"></div>
+              </div>
             </div>
             <div class="about__textbox">
               <p class="about__text">
@@ -287,10 +292,14 @@
                 <span>L</span>eadership
                 <div class="leadership__title-sup">מַנהִיגוּת<div>
               </h2>
-              <a href="#" class="leadership__btn btn wow btnAnim" data-wow-duration="1s">
-                <p>About team</p>
-                <p>About team</p>
-              </a>
+           
+              <div class=" btn__wrapper">
+                <a href="#" class="leadership__btn btn wow btnAnim" data-wow-duration="1s">
+                  <p>About team</p>
+                  <p>About team</p>
+                </a>
+                <div class=" btn__mask  wow animate__slideOutLeft" data-wow-duration=".5s"></div>
+              </div>
             </div>
             <div class="leadership__items">
               <div class="leadership__item">
@@ -470,6 +479,7 @@
                 <p class="wow animate__slideInUp" data-wow-duration=".5s"><span>W</span>ays to get </p>
                 <p class="wow animate__slideInUp" data-wow-duration=".5s"><span>i</span>nvolved</p>
               </h2>
+              
               <div class="ways__title-sup">להתערב!</div>
               
             </div>
@@ -479,10 +489,14 @@
                   We have different opportunities both for <span>Efrat and satellite Communities.</span> Pay a visit our classes
                 </p>
               </div>
-              <a href="#" class="ways__btn btn wow animate__animated btnAnim" data-wow-duration="1s">
-                <p>Schedule</p>
-                <p>Schedule</p>
-              </a>
+            
+              <div class=" btn__wrapper">
+                <a href="#" class="ways__btn btn wow  btnAnim" data-wow-duration="1s">
+                  <p>Schedule</p>
+                  <p>Schedule</p>
+                </a>
+                <div class=" btn__mask  wow animate__slideOutLeft" data-wow-duration=".5s"></div>
+              </div>
             </div>
             <div class="ways__items">
               <span class="ways__item-border wow lineAnim" data-wow-duration="2s"></span>
@@ -642,8 +656,82 @@
           <div class="footer__inner-right">
             <div class="footer__logo">
               <a href="#" class="footer__logo-link">
-                  <img src="images/footerLogo.svg" alt="Footer logotype">
+                <img src="images/footerLogo.svg" alt="Footer logotype">
               </a>
+            </div>
+            <div class="footer__button">
+              <a href="#" class="menu__button menu__button--footer">
+                <p>Donate</p>
+                <p>Donate</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__inner--tablet">
+          <div class="footer__inner-left">
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link footer__list-link--1">
+                  <p>About us</p>
+                  <p>About us</p>
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link footer__list-link--2">
+                  <p>Avrechim</p>
+                  <p>Avrechim</p>
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link footer__list-link--3">
+                  <p>Team</p>
+                  <p>Team</p>
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link footer__list-link--4">
+                  <p>Schedule</p>
+                  <p>Schedule</p>
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#" class="footer__list-link footer__list-link--5">
+                  <p>Contacts</p>
+                  <p>Contacts</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__inner-right">
+            <div class="footer__box-right">
+              <div class="footer__contacts">
+                <h5 class="footer__contacts-title">Contacts</h5>
+                <div class="footer__contacts-box">
+                  <p class="footer__contacts-name">WhatsApp</p>
+                  <a href="tel:+97225383390" class="footer__contacts-phone"
+                    >
+                    <p>+972-2-538-3390</p>
+                    <p>+972-2-538-3390</p>
+                    </a
+                  >
+                </div>
+                <div class="footer__contacts-box">
+                  <p class="footer__contacts-name">Email</p>
+                  <a
+                    href="mailto:moshe@shiratdavid.com"
+                    class="footer__contacts-mail"
+                    >
+                    <p>moshe@shiratdavid.com</p>
+                    <p>moshe@shiratdavid.com</p>
+                    </a
+                  >
+                </div>
+              </div>
+              <div class="footer__logo">
+                <a href="#" class="footer__logo-link">
+                  <img src="images/footerLogo.svg" alt="Footer logotype">
+                </a>
+              </div>
             </div>
             <div class="footer__button">
               <a href="#" class="menu__button menu__button--footer">
@@ -687,7 +775,7 @@
           <img class="popup__img" src="images/avrechim-2--popup.jpg" alt="">
           <h3 class="popup__title">Shimon Hermon</h3>
           <p class="popup__text">
-            Shimon Hermon grew up in Miami, Florida. He studied Acting and Directing at the New World Conservatory in South Florida and Journalism at Fordham University Lincoln Center in New York before moving to Israel and becoming חוזר בתשובה at Yeshivat Aish HaTorah, where he studied for three years. He has since been involved in education and Kiruv, both in his own home and with organizations like Forum for Jewish Leadership. Shimon, his wife Batsheva, and daughter Emunah Rachel are excited to join the Shirat David community!
+            Shimon grew up in Miami, Florida. He studied Acting and Directing at the New World Conservatory in South Florida and Journalism at Fordham University Lincoln Center in New York before moving to Israel and becoming חוזר בתשובה at Yeshivat Aish HaTorah, where he studied for three years. He has since been involved in education and Kiruv, both in his own home and with organizations like Forum for Jewish Leadership. Shimon, his wife Batsheva, and daughter Emunah Rachel are excited to join the Shirat David community!
           </p>
         </div>
     </div>
@@ -702,9 +790,9 @@
               
           </button>
           <img class="popup__img" src="images/avrechim-3--popup.jpg" alt="">
-          <h3 class="popup__title">Rabbi Noam</h3>
+          <h3 class="popup__title">Noam Lawee</h3>
           <p class="popup__text">
-            Rabbi Noam grew up in Toronto. After high school, he spent two years in Israel learning at Yeshivat Kerem B’Yavne (KBY). He then moved to the States and completed a Bachelor’s degree in Psychology at Yeshiva University. Upon completing college studies, Rabbi Noam returned to KBY as a member of their Kollel where he received Semicha from the Israeli Rabbinate. Rabbi Noam and his wife Adeena and 3 sons, are excited to join the Shirat David community!
+            Noam grew up in Toronto. After high school, he spent two years in Israel learning at Yeshivat Kerem B’Yavne (KBY). He then moved to the States and completed a Bachelor’s degree in Psychology at Yeshiva University. Upon completing college studies, Rabbi Noam returned to KBY as a member of their Kollel where he received Semicha from the Israeli Rabbinate. Rabbi Noam and his wife Adeena and 3 sons, are excited to join the Shirat David community!
           </p>
         </div>
     </div>
@@ -719,9 +807,9 @@
               
           </button>
           <img class="popup__img" src="images/avrechim-4--popup.jpg" alt="">
-          <h3 class="popup__title">Rabbi Isaac</h3>
+          <h3 class="popup__title">Isaac Selter</h3>
           <p class="popup__text">
-            Rabbi Isaac grew up in Monsey, NY. After high school, he studied at Yeshivat Hakotel. He then received his BA in Mathematics and Judaic Studies from Yeshiva College and his Semicha from Rabbi Isaac Elchanan Rabbinical Seminary. In addition, he holds a Teacher's certificate from Herzog College, taught at Orot Etzion in Neve Daniel, and serves as the editorial assistant at TRADITION:: A Journal of Orthodox Jewish Thought. Isaac, his wife Shira, and their son, Yehuda, are excited to join the Shirat David community!
+            Isaac grew up in Monsey, NY. After high school, he studied at Yeshivat Hakotel. He then received his BA in Mathematics and Judaic Studies from Yeshiva College and his Semicha from Rabbi Isaac Elchanan Rabbinical Seminary. In addition, he holds a Teacher's certificate from Herzog College, taught at Orot Etzion in Neve Daniel, and serves as the editorial assistant at TRADITION:: A Journal of Orthodox Jewish Thought. Isaac, his wife Shira, and their son, Yehuda, are excited to join the Shirat David community!
           </p>
         </div>
     </div>
@@ -738,7 +826,7 @@
           <img class="popup__img" src="images/avrechim-5--popup.jpg" alt="">
           <h3 class="popup__title">Yaakov Greenberg</h3>
           <p class="popup__text">
-            Yaakov Greenberg grew up in the West Roger’s Park neighborhood in Chicago, IL. After High School, he studied at Yeshivat Har Etzion for two years and then drafted to the IDF through the Yeshiva’s Hesder program. Yaakov served in the Rabbanut as the Coordinator of רכזי מו״ר, where he assisted in the religious atmospheres of over 80 bases. Since returning from the army, Yaakov has been learning and teaching at Yeshivat Har Etzion and finishing a degree in Education at Herzog College. Yaakov and his wife Alyssa, are excited to join the Shirat David community!
+            Yaakov grew up in the West Roger’s Park neighborhood in Chicago, IL. After High School, he studied at Yeshivat Har Etzion for two years and then drafted to the IDF through the Yeshiva’s Hesder program. Yaakov served in the Rabbanut as the Coordinator of רכזי מו״ר, where he assisted in the religious atmospheres of over 80 bases. Since returning from the army, Yaakov has been learning and teaching at Yeshivat Har Etzion and finishing a degree in Education at Herzog College. Yaakov and his wife Alyssa, are excited to join the Shirat David community!
           </p>
         </div>
     </div>
@@ -801,6 +889,11 @@
     <script src="js/wow.min.js"></script>
     <script src="js/main.min.js"></script>
     <script>
+
+document.querySelector('#scrollButton').addEventListener('click', function() {
+  const targetBlock = document.querySelector('#targetBlock');
+  targetBlock.scrollIntoView({ behavior: 'smooth' });
+});
 
     bindModal(".avrechim__item--1", ".popup--1", ".popup--1 .popup__close", true, 'flex');
     bindModal(".avrechim__item--2", ".popup--2", ".popup--2 .popup__close", true, 'flex');
@@ -907,11 +1000,11 @@
       titleAnimationFunc('.avrechim__title-sup', '.char', 'suptitleAnim')
       titleAnimationFunc('.staff__title-sup', '.char', 'suptitleAnim')
       titleAnimationFunc('.staff__item-title', '.word', 'textAnim')
-      titleAnimationFunc('.staff__item-info', '.char', 'textAnim')
+      fasterTitleAnimationFunc('.staff__item-info', '.char', 'textAnim')
       titleAnimationFunc('.staff__item-title--second', '.word', 'textAnim')
-      titleAnimationFunc('.staff__item-info--second', '.char', 'textAnim')
+      fasterTitleAnimationFunc('.staff__item-info--second', '.char', 'textAnim')
       titleAnimationFunc('.staff__item-title--third', '.word', 'textAnim')
-      titleAnimationFunc('.staff__item-info--third', '.char', 'textAnim')
+      fasterTitleAnimationFunc('.staff__item-info--third', '.char', 'textAnim')
       titleAnimationFunc('.ways__info-text', '.line', 'textAnim')
       lineAnimationFunc('.ways__item-line', 'lineAnim', '500ms', '1s')
       // titleAnimationFunc('.ways__title', '.line', 'textAnim')

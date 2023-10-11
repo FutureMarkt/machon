@@ -276,6 +276,7 @@ burgerItem.addEventListener("click", () => {
   }
 });
 
+
 function bindModal(
   triggerSelector,
   modalSelector,
@@ -284,10 +285,24 @@ function bindModal(
   display = "block"
 ) {
   const trigger = document.querySelectorAll(triggerSelector),
-    modal = document.querySelector(modalSelector),
-    close = document.querySelector(closeSelector),
-    windows = document.querySelectorAll("[data-modal]"),
-    scroll = calcScroll();
+        modal = document.querySelector(modalSelector),
+        close = document.querySelector(closeSelector),
+        windows = document.querySelectorAll("[data-modal]");
+
+  function calcScroll() {
+    const div = document.createElement("div");
+
+    div.style.width = "50px";
+    div.style.height = "50px";
+    div.style.overflowY = "scroll";
+    div.style.visibility = "hidden";
+
+    document.body.appendChild(div);
+    const scrollWidth = div.offsetWidth - div.clientWidth;
+    div.remove();
+
+    return scrollWidth;
+  }
 
   trigger.forEach((item) => {
     item.addEventListener("click", (e) => {
@@ -301,8 +316,8 @@ function bindModal(
 
       modal.style.display = display;
       document.body.style.overflow = "hidden";
-      document.body.style.marginRight = `${scroll}px`;
-      // document.body.classList.add("modal-open");
+      const scrollbarWidth = calcScroll();
+      document.body.style.marginRight = `${scrollbarWidth}px`; 
     });
   });
 
@@ -312,24 +327,31 @@ function bindModal(
     });
 
     modal.style.display = "none";
-    document.body.style.overflow = "";
-    document.body.style.marginRight = "0px";
-    // document.body.classList.remove("modal-open");
-  });
 
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal && closeClickOverlay) {
-      windows.forEach((item) => {
-        item.style.display = "none";
-      });
-
-      modal.style.display = "none";
-      document.body.style.overflow = "";
-      document.body.style.marginRight = "0px";
-
-      // document.body.classList.remove("modal-open");
+    const burgerItem = document.querySelector(".menu__burger");
+    if (!burgerItem.classList.contains("active")) {
+      document.body.style.overflow = ""; 
     }
+    document.body.style.marginRight = "0px";
   });
+
+  if (closeClickOverlay) {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        windows.forEach((item) => {
+          item.style.display = "none";
+        });
+  
+        modal.style.display = "none";
+  
+        const burgerItem = document.querySelector(".menu__burger");
+        if (!burgerItem.classList.contains("active")) {
+          document.body.style.overflow = "";
+        }
+        document.body.style.marginRight = "0px";
+      }
+    });
+  }
 }
 
 function showModalByTime(selector, time) {
@@ -361,4 +383,3 @@ bindModal(
   true,
   "flex"
 );
-
