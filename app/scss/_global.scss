@@ -96,3 +96,9 @@ body {
     color: $purple;
   }
 }
+
+.hidden {
+  display: none;
+  // opacity:0;
+  // transition: .3s ease;
+}
