@@ -13,7 +13,7 @@
       rel="stylesheet" />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
-  <body>
+  <body class="hidden">
     <header class="header">
       <div class="container">
         <nav class="menu">
@@ -392,7 +392,7 @@
             <div class="involved__buttons">
               <a
                 href="#"
-                class="menu__button involved__btn menu__button--involvled">
+                class="menu__button involved__btn menu__button--involved">
                 <p>Donate</p>
                 <p>Donate</p>
               </a>
@@ -622,7 +622,7 @@
     <script>
       // if (window.innerWidth > 1200) {
       const involvedBtnSplit = new SplitType(".involved__btn--anim");
-      const involvledBtn2 = document.querySelector(".involved__btn--anim");
+      const involvedBtn2 = document.querySelector(".involved__btn--anim");
       const animationInvolved2 = gsap.to(".involved__btn--anim .char", {
         y: -40,
         stagger: 0.02,
@@ -630,10 +630,10 @@
         duration: 0.1,
         paused: true,
       });
-      involvledBtn2.addEventListener("mouseenter", () =>
+      involvedBtn2.addEventListener("mouseenter", () =>
         animationInvolved2.play()
       );
-      involvledBtn2.addEventListener("mouseleave", () =>
+      involvedBtn2.addEventListener("mouseleave", () =>
         animationInvolved2.reverse()
       );
 
@@ -653,18 +653,18 @@
         animationWaysMail.reverse()
       );
 
-      const involvledBtn = document.querySelector(".menu__button--involvled");
-      const animationInvolved = gsap.to(".menu__button--involvled .char", {
+      const involvedBtn = document.querySelector(".menu__button--involved");
+      const animationInvolved = gsap.to(".menu__button--involved .char", {
         y: -40,
         stagger: 0.02,
         delay: 0.1,
         duration: 0.1,
         paused: true,
       });
-      involvledBtn.addEventListener("mouseenter", () =>
+      involvedBtn.addEventListener("mouseenter", () =>
         animationInvolved.play()
       );
-      involvledBtn.addEventListener("mouseleave", () =>
+      involvedBtn.addEventListener("mouseleave", () =>
         animationInvolved.reverse()
       );
 

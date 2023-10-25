@@ -50,6 +50,11 @@
   .menu {
     overflow: hidden;
   }
+  .menu__mobile-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
   .menu__list-wrapper {
     display: block;
     position: absolute;
@@ -117,6 +122,9 @@
   }
   .menu__burger-text {
     transition: 0.3s ease;
+  }
+  .menu__mobile-box {
+    margin-top: auto;
   }
   .about__titlebox {
     margin-left: 0;
@@ -480,46 +488,45 @@
   .dedicated-staff__item-mask {
     display: none;
   }
-  .daily__item-p--third .char{
+  .daily__item-p--third .char {
     color: $black;
   }
-  .logotype__background{
+  .logotype__background {
     animation: none;
   }
   .about__goals-subtitle .char,
-  .logotype__suptitle .char{
+  .logotype__suptitle .char {
     color: $lightgrey;
   }
-  .suptitleAnim{
+  .suptitleAnim {
     color: $lightgrey;
-
   }
-  .char{
-    animation: none!important;
+  .char {
+    animation: none !important;
   }
   .logotype__text .line {
     color: $black !important;
     animation: none !important;
   }
-  .btn{
+  .btn {
     animation: none;
     opacity: 1;
     transform: scale(1);
   }
-  .menu__info .line{
+  .menu__info .line {
     background-color: transparent;
     padding: 0;
   }
-  .textAnim{
+  .textAnim {
     color: $black;
   }
-  .about__goals-subtitle{
+  .about__goals-subtitle {
     color: $lightgrey;
   }
-  .avrechim-page__titlebox{
+  .avrechim-page__titlebox {
     margin-bottom: 40px;
   }
-  .avrechim-page .avrechim-page__title{
+  .avrechim-page .avrechim-page__title {
     margin-bottom: 0;
   }
 }
@@ -605,6 +612,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: none;
     img {
       max-width: 340px;
     }
@@ -636,37 +644,37 @@
 /**/
 
 @media only screen and (max-width: 860px) {
-  .footer__inner--tablet{
+  .footer__inner--tablet {
     display: flex;
     gap: 80px;
     border-top: 1px solid $lightgrey;
     padding: 25px 0 40px;
-    .footer__inner-right{
+    .footer__inner-right {
       flex-direction: column;
       gap: 27px;
       max-width: none;
     }
-    .footer__inner-left{
+    .footer__inner-left {
       max-width: 125px;
     }
-    .footer__box-right{
+    .footer__box-right {
       display: flex;
       gap: 90px;
       width: 100%;
       justify-content: space-between;
     }
-    .footer__button{
+    .footer__button {
       max-width: none;
-      .menu__button{
+      .menu__button {
         max-width: none;
       }
     }
-    .footer__list-item{
+    .footer__list-item {
       font-size: 28px;
       line-height: 100%; /* 28px */
     }
   }
-  .footer__inner{
+  .footer__inner {
     display: none;
   }
 }
@@ -763,7 +771,7 @@
   .involved__title {
     font-size: 132px;
   }
-  .involved.involved--daily .involved__arrow img{
+  .involved.involved--daily .involved__arrow img {
     width: 50px;
     height: 50px;
   }
@@ -789,7 +797,7 @@
     // position: static;
     // margin-left: 206px;
   }
-  .daily__item{
+  .daily__item {
     min-height: auto;
   }
   .daily__item-text {
@@ -823,7 +831,7 @@
       max-width: 220px;
     }
   }
-  .footer__inner--tablet{
+  .footer__inner--tablet {
     .footer__button {
       order: 1;
       max-width: none;
@@ -832,10 +840,10 @@
         max-width: none;
       }
     }
-    .footer__box-right{
+    .footer__box-right {
       gap: 0;
     }
-    .footer__inner-right{
+    .footer__inner-right {
       width: 100%;
     }
   }
@@ -959,15 +967,20 @@
   }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 690px) {
+  .about__goals-text:before {
+    right: 10px;
+  }
+}
 
-  .footer__inner--tablet .footer__inner-left{
+@media only screen and (max-width: 640px) {
+  .footer__inner--tablet .footer__inner-left {
     max-width: 90px;
   }
-  .footer__inner--tablet .footer__list-item{
+  .footer__inner--tablet .footer__list-item {
     font-size: 19px;
   }
-  .footer__inner--tablet{
+  .footer__inner--tablet {
     gap: 40px;
   }
 
@@ -1007,17 +1020,8 @@
   .bar3 {
     background-color: $white;
   }
-  .menu__list--mob {
-    .menu__info {
-      color: $black;
-      bottom: 90px;
-    }
-    .menu__button {
-      max-width: 300px;
-      display: block;
-      position: absolute;
-      bottom: 30px;
-    }
+  .menu__list-wrapper {
+    bottom: 0;
   }
   .menu {
     .menu__button {
@@ -1026,27 +1030,39 @@
   }
   .menu__list--mob {
     top: 0;
-    padding-top: 187px !important;
-    // height: 100%;
-    min-height: 100vh;
-    overflow-y: hidden;
+    padding-top: 8px !important;
+    // padding-top: 187px !important;
+    height: 100%;
+    // min-height: 100vh;
+    gap: 0;
+    justify-content: space-between;
     .menu__info {
       color: $black;
-      bottom: 90px;
+      position: static;
+      // margin-top: auto;
     }
     .menu__button {
       max-width: 300px;
       display: block;
-      position: absolute;
-      bottom: 30px;
+      position: static;
+      margin-top: 12px;
+    }
+    .menu__list-link {
+      white-space: nowrap;
     }
   }
+  .menu__mobile-box {
+    margin-top: 0;
+  }
+
+  // по анимаций - изначально типов нет, слайдИнАп для самого айтема оффаем нахуй, работаем чисто с маской
+  // и делаем быстрее дефолт текст на странице
 
   .menu__list-logo {
     display: block;
-    position: absolute;
-    top: 8px;
-    left: 15px;
+    // position: absolute;
+    // top: 8px;
+    // left: 15px;
   }
 
   .menu__burger.active {
@@ -1182,7 +1198,7 @@
   .avrechim-page .avrechim-page__title {
     font-size: 80px;
   }
-  .avrechim-page__titlebox{
+  .avrechim-page__titlebox {
     margin-bottom: 25px;
   }
 
@@ -1243,6 +1259,9 @@
   }
   .team__item-texts {
     order: 3;
+  }
+  .team__item-text {
+    max-width: 600px;
   }
   .team__item--second {
     .team__item-titleinfo::before {
@@ -1312,70 +1331,68 @@
   .ways__item--second .ways__list {
     margin-left: 0;
   }
-  .donate-popup__inner{
+  .donate-popup__inner {
     max-width: 330px;
   }
-  .donate-popup__footer{
+  .donate-popup__footer {
     padding-left: 10px;
     padding-right: 10px;
   }
-  .donate-popup__buttons{
+  .donate-popup__buttons {
     width: 100%;
     padding: 0 10px;
   }
-  .donate-popup__btn{
+  .donate-popup__btn {
     width: 100%;
     max-width: none;
   }
 }
 
-@media only screen and (max-width: 560px){
-  
-.footer__list {
-  display: none;
-}
-.footer__inner--tablet{
-  display: none;
-}
-.footer__inner {
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  gap: 25px;
-  display: flex;
-}
-.footer__inner-left {
-  max-width: none;
-  justify-content: center;
-}
-.footer__inner-right {
-  justify-content: center;
-  align-items: center;
-}
-.footer__contacts-name {
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%; /* 17px */
-  letter-spacing: -0.17px;
-}
-.footer__contacts-phone,
-.footer__contacts-mail {
-  font-size: 14px;
-}
-.footer__button .menu__button {
-  max-width: 330px;
-}
-.footer__button {
-  max-width: 330px;
-}
-.footer__logo {
-  img {
-    width: 330px;
-    height: 240px;
+@media only screen and (max-width: 560px) {
+  .footer__list {
+    display: none;
   }
-}
-
+  .footer__inner--tablet {
+    display: none;
+  }
+  .footer__inner {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 25px;
+    display: flex;
+  }
+  .footer__inner-left {
+    max-width: none;
+    justify-content: center;
+  }
+  .footer__inner-right {
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__contacts-name {
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 17px */
+    letter-spacing: -0.17px;
+  }
+  .footer__contacts-phone,
+  .footer__contacts-mail {
+    font-size: 14px;
+  }
+  .footer__button .menu__button {
+    max-width: 330px;
+  }
+  .footer__button {
+    max-width: 330px;
+  }
+  .footer__logo {
+    img {
+      width: 330px;
+      height: 240px;
+    }
+  }
 }
 
 @media only screen and (max-width: 540px) {
@@ -1411,8 +1428,6 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
- 
-
   .avrechim-page .avrechim__items {
     width: 1580px;
   }
@@ -1545,17 +1560,16 @@
     min-height: 100vh;
     // justify-content: space-around;
   }
-  .logotype__svg-wrapper{
-
+  .logotype__svg-wrapper {
   }
   .logotype__svg {
     margin-top: 12vh;
     width: 330px;
     height: 240px;
     margin-left: -30px;
-    flex: 1
+    flex: 1;
   }
-  .logotype__background{
+  .logotype__background {
     // background-image: url(../images/logo-bg--mob2.svg);
     top: -80px;
     height: 600px;
@@ -1564,15 +1578,14 @@
     order: 1;
     margin-top: 30px;
     margin-left: 0;
-    flex: 1
+    flex: 1;
   }
   .logotype__button {
     margin-top: auto;
     order: 2;
     margin-bottom: 30px;
   }
- 
- 
+
   .logotype__suptitle {
     left: 50%;
     top: 30px;
@@ -1676,29 +1689,26 @@
     width: 1580px;
     padding-bottom: 10px;
   }
-  .about-page__info-titlebox{
+  .about-page__info-titlebox {
     margin-bottom: 20px;
-
   }
-  .about-page__info-title{
+  .about-page__info-title {
     margin-bottom: 0;
   }
   .team__titlebox,
-  .daily__titlebox{
+  .daily__titlebox {
     margin-bottom: 0;
   }
 
-  .involved.involved--daily .involved__arrow img{
+  .involved.involved--daily .involved__arrow img {
     width: 25px;
     height: 25px;
   }
-  
 }
 
 /**/
 
 @media only screen and (max-width: 426px) {
-
 }
 
 /* Custom, iPhone Retina */

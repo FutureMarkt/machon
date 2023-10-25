@@ -1,3 +1,4 @@
+// window.addEventListener('load', function() {
 function titleAnimationFunc(selector, wordOrChar = ".word", anim) {
   const splitText = new SplitType(selector);
   const title = document.querySelector(selector);
@@ -6,7 +7,7 @@ function titleAnimationFunc(selector, wordOrChar = ".word", anim) {
     word.classList.add(anim);
     word.style.animationName = anim;
 
-    word.dataset.wowDuration = `1s`;
+    word.dataset.wowDuration = `.7s`;
     i++;
     word.dataset.wowDelay = `${i * 1}00ms`;
 
@@ -45,3 +46,5 @@ function lineAnimationFunc(selector, anim, delay = "500ms", duration = "1s") {
   intersectionObserver.disconnect(document.querySelector(selector));
   // });
 }
+
+// });

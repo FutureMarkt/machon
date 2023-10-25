@@ -13,7 +13,7 @@
       rel="stylesheet" />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
-  <body>
+  <body class="hidden">
     <header class="header">
       <div class="container">
         <nav class="menu">
@@ -66,7 +66,7 @@
             </ul>
 
             <div class="menu__list-wrapper">
-              <ul class="menu__list--mob">
+              <div class="menu__list--mob">
 
                 <div class="menu__list-logo">
                   <svg width="190" height="138" viewBox="0 0 220 160" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -102,63 +102,68 @@
                     
                 </div>
 
-                <li class="menu__list-item">
-                  <a href="#" class="menu__list-link">About us</a>
-                       <button class="menu__list-arr">
-                    <svg width="26" height="8" viewBox="0 0 26 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM0 4.5H25V3.5H0V4.5Z" fill="#202020"/>
-                    </svg>
-                  </button>
-                </li>
-                <li class="menu__list-item">
-                  <a href="#" class="menu__list-link">Avrechim</a>
-                       <button class="menu__list-arr">
-                    <svg width="26" height="8" viewBox="0 0 26 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM0 4.5H25V3.5H0V4.5Z" fill="#202020"/>
-                    </svg>
-                  </button>
-                </li>
-                <li class="menu__list-item">
-                  <a href="#" class="menu__list-link">Team</a>
-                       <button class="menu__list-arr">
-                    <svg width="26" height="8" viewBox="0 0 26 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM0 4.5H25V3.5H0V4.5Z" fill="#202020"/>
-                    </svg>
-                  </button>
-                </li>
-                <li class="menu__list-item">
-                  <a href="#" class="menu__list-link">Schedule</a>
+                <ul class="menu__mobile-list">
+                  <li class="menu__list-item">
+                    <a href="#" class="menu__list-link">About us</a>
+                         <button class="menu__list-arr">
+                      <svg width="26" height="8" viewBox="0 0 26 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM0 4.5H25V3.5H0V4.5Z" fill="#202020"/>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="menu__list-item">
+                    <a href="#" class="menu__list-link">Avrechim</a>
+                         <button class="menu__list-arr">
+                      <svg width="26" height="8" viewBox="0 0 26 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM0 4.5H25V3.5H0V4.5Z" fill="#202020"/>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="menu__list-item">
+                    <a href="#" class="menu__list-link">Team</a>
+                         <button class="menu__list-arr">
+                      <svg width="26" height="8" viewBox="0 0 26 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM0 4.5H25V3.5H0V4.5Z" fill="#202020"/>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="menu__list-item">
+                    <a href="#" class="menu__list-link">Schedule</a>
+                    
+                    <button class="menu__list-arr">
+                      <svg width="26" height="8" viewBox="0 0 26 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM0 4.5H25V3.5H0V4.5Z" fill="#202020"/>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="menu__list-item">
+                    <a href="#" class="menu__list-link">Contacts</a>
+                         <button class="menu__list-arr">
+                      <svg width="26" height="8" viewBox="0 0 26 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM0 4.5H25V3.5H0V4.5Z" fill="#202020"/>
+                      </svg>
+                    </button>
+                  </li>
+                  <div class="menu__switch">
+                    <button class="menu__switch-btn menu__switch-btn--active">
+                      ENG
+                    </button>
+                    <span>|</span>
+                    <button class="menu__switch-btn">עִברִית</button>
+                  </div>
                   
-                  <button class="menu__list-arr">
-                    <svg width="26" height="8" viewBox="0 0 26 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM0 4.5H25V3.5H0V4.5Z" fill="#202020"/>
-                    </svg>
-                  </button>
-                </li>
-                <li class="menu__list-item">
-                  <a href="#" class="menu__list-link">Contacts</a>
-                       <button class="menu__list-arr">
-                    <svg width="26" height="8" viewBox="0 0 26 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM0 4.5H25V3.5H0V4.5Z" fill="#202020"/>
-                    </svg>
-                  </button>
-                </li>
+                </ul>
     
-                <div class="menu__switch">
-                  <button class="menu__switch-btn menu__switch-btn--active">
-                    ENG
-                  </button>
-                  <span>|</span>
-                  <button class="menu__switch-btn">עִברִית</button>
+                <div class="menu__mobile-box">
+                  <p class="menu__info">
+                    We train rabbis for Yisrael English speaking communities
+                  </p>
+                  <a href="#" class="menu__button menu__button--mob">
+                    <p>Donate</p>
+                    <p>Donate</p>
+                  </a>
                 </div>
-                <p class="menu__info">
-                  We train rabbis for Yisrael English speaking communities
-                </p>
-                <a href="#" class="menu__button menu__button--mob">
-                  <p>Donate</p>
-                  <p>Donate</p>
-                </a>
-              </ul>
+              </div>
             </div>
           
           <div class="menu__controls">
@@ -328,13 +333,13 @@
 
       <section class="avrechim">
         <div class="container">
+          <div class="avrechim__titlebox">
+            <h2 class="avrechim__title wow animate__animated animate__slideInUp" data-wow-duration=".5s">
+              <span>A</span>vrechim
+              <div class="avrechim__title-sup">אברכים<div>
+            </h2>
+          </div>
           <div class="avrechim__inner">
-            <div class="avrechim__titlebox">
-              <h2 class="avrechim__title wow animate__animated animate__slideInUp" data-wow-duration=".5s">
-                <span>A</span>vrechim
-                <div class="avrechim__title-sup">אברכים<div>
-              </h2>
-            </div>
               <div class="avrechim__items">
                 <div class="avrechim__item avrechim__item--1 ">
                   <div class="avrechim__item-mask animate__slideOutDown wow" data-wow-duration="1s"></div>
@@ -350,7 +355,7 @@
                     Learn more about yonatan
                   </a>
                 </div>
-                <div class="avrechim__item avrechim__item--2 wow animate__slideInUp " data-wow-duration="1s">
+                <div class="avrechim__item avrechim__item--2  ">
                   <div class="avrechim__item-mask animate__slideOutUp wow" data-wow-duration="1s"></div>
                   <img src="images/avrechim-2.jpg" alt="" class="avrechim__item-img">
                   <div class="avrechim__item-box">
@@ -393,7 +398,7 @@
                     Learn more about isaac
                   </a>
                 </div>
-                <div class="avrechim__item avrechim__item--5  wow animate__slideInUp "  data-wow-duration="1s">
+                <div class="avrechim__item avrechim__item--5  ">
                   <!-- <div class="avrechim__item-mask  " data-wow-duration="1s"></div> -->
                   <div class="avrechim__item-mask animate__slideOutUp wow" data-wow-duration="1s"></div>
                   <img src="images/avrechim-5.jpg" alt="" class="avrechim__item-img">
@@ -902,7 +907,8 @@ document.querySelector('#scrollButton').addEventListener('click', function() {
     bindModal(".avrechim__item--5", ".popup--5", ".popup--5 .popup__close", true, 'flex');
     bindModal(".avrechim__item--6", ".popup--6", ".popup--6 .popup__close", true, 'flex');
       // if (window.innerWidth > 1200) {
-        
+  // window.addEventListener('load', function() {
+
 
 
       const aboutBtnSplit = new SplitType(".about__btn");
@@ -983,6 +989,7 @@ document.querySelector('#scrollButton').addEventListener('click', function() {
       if (entries[0].intersectionRatio <= 0) return;
 
       titleAnimationFunc('.about__title-sup', '.char', 'suptitleAnim')
+      
       titleAnimationFunc('.about__text', '.line', 'textAnim')
       titleAnimationFunc('.about__text--second', '.line', 'textAnim')
       // lineAnimationFunc('.about__btn', 'btnAnim')
@@ -1026,6 +1033,7 @@ document.querySelector('#scrollButton').addEventListener('click', function() {
 
 
       // }
+    // });
 
 
     </script>

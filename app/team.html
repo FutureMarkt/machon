@@ -13,7 +13,7 @@
       rel="stylesheet" />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
-  <body>
+  <body class="hidden">
     <header class="header">
       <div class="container">
         <nav class="menu">
@@ -662,6 +662,27 @@
 
 // if (window.innerWidth > 1200) {
   
+  // const intersectionObserver = new IntersectionObserver((entries) => {
+  //       if (entries[0].intersectionRatio <= 0) return;
+
+  //       titleAnimationFunc(".menu__info--copmressed", ".line", "textAnim");
+  //       titleAnimationFunc(".team__item-titleinfo", ".word", "textAnim");
+  //       titleAnimationFunc(".team__item-text", ".line", "textAnim");
+  //       setTimeout(() => {
+  //         titleAnimationFunc(".team__item-text--second", ".line", "textAnim");
+  //         document.querySelector(".team__item-text--second").style.opacity =
+  //           "1";
+  //       }, 1000)
+  //       titleAnimationFunc(".team__item-text--third", ".line", "textAnim");
+  //       titleAnimationFunc(".team__item-text--four", ".line", "textAnim");
+  //       titleAnimationFunc('.staff__title-sup', '.char', 'suptitleAnim')
+  //       titleAnimationFunc('.staff__item-title', '.word', 'textAnim')
+  //       fasterTitleAnimationFunc('.staff__item-info', '.char', 'textAnim')
+  //       titleAnimationFunc('.staff__item-title--second', '.word', 'textAnim')
+  //       fasterTitleAnimationFunc('.staff__item-info--second', '.char', 'textAnim')
+  //       titleAnimationFunc('.staff__item-title--third', '.word', 'textAnim')
+  //       fasterTitleAnimationFunc('.staff__item-info--third', '.char', 'textAnim')
+  //     });
   const intersectionObserver = new IntersectionObserver((entries) => {
         if (entries[0].intersectionRatio <= 0) return;
 
@@ -672,7 +693,7 @@
           titleAnimationFunc(".team__item-text--second", ".line", "textAnim");
           document.querySelector(".team__item-text--second").style.opacity =
             "1";
-        }, 1000)
+        }, 700)
         titleAnimationFunc(".team__item-text--third", ".line", "textAnim");
         titleAnimationFunc(".team__item-text--four", ".line", "textAnim");
         titleAnimationFunc('.staff__title-sup', '.char', 'suptitleAnim')

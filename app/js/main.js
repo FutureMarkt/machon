@@ -1,8 +1,14 @@
-new WOW({
-  mobile: false,
-}).init();
 
-
+window.addEventListener('load', function() {
+    new WOW({
+      mobile: false,
+    }).init();
+    
+    const hiddenContent = document.querySelectorAll('.hidden');
+    hiddenContent.forEach(function(element) {
+      element.classList.remove('hidden');
+    });
+});
 
 const myText = new SplitType(".menu__button");
 const myText2 = new SplitType(".menu__list-link");
