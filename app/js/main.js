@@ -1,16 +1,13 @@
 
 window.addEventListener('load', function() {
-  // setTimeout(() => {
     new WOW({
       mobile: false,
     }).init();
     
-    // Показать скрытый контент
     const hiddenContent = document.querySelectorAll('.hidden');
     hiddenContent.forEach(function(element) {
       element.classList.remove('hidden');
     });
-  // }, 2000)
 });
 
 const myText = new SplitType(".menu__button");
